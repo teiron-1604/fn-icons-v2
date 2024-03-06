@@ -1,28 +1,26 @@
 {
-  "name": "juuust-react-icon",
-  "version": "0.2.5",
+  "name": "fn-icons",
+  "version": "0.0.0",
   "description": "Icon automation workflow with Figma",
-  "main": "dist/juuust-react-icon.cjs.js",
-  "module": "dist/juuust-react-icon.esm.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "typings": "dist/icons.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/leadream/juuust-react-icon.git",
-  "author": "leadream",
+  "repository": "https://github.com/teiron-1604/fn-icons.git",
+  "author": "teiron-jueyue",
   "keywords": [
     "react",
     "icons",
     "svg",
     "inline",
     "figma",
-    "juuust",
     "design"
   ],
   "bugs": {
-    "url": "https://github.com/leadream/juuust-react-icon/issues"
+    "url": "https://github.com/teiron-1604/fn-icons/issues"
   },
-  "homepage": "https://github.com/leadream/juuust-react-icon#readme",
   "scripts": {
     "fetch": "node bin/fetchSVG.js",
     "generate": "sudo rm -rf src/icons && node bin/build.js",
@@ -33,7 +31,6 @@
   "config": {
     "style": "fill"
   },
-  "license": "MIT",
   "dependencies": {
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",

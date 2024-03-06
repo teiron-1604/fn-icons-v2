@@ -6,7 +6,7 @@ It's a repository for [Figma Icon Automation Plugin](https://github.com/leadream
 Create a `.env` in the root directory. Put your Figma file url and Figma token inside.
 
 ```
-FIGMA_FILE_URL=https://www.figma.com/file/********************/juuust-react-icon
+FIGMA_FILE_URL=https://www.figma.com/file/********************/******
 FIGMA_TOKEN=********************************
 ```
 
