@@ -12,16 +12,7 @@ const Clipboard = props => {
       fill={color}
       {...otherProps}
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M6 5a1 1 0 00-1 1v14a1 1 0 001 1h12a1 1 0 001-1V6a1 1 0 00-1-1h-2a1 1 0 110-2h2a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V6a3 3 0 013-3h2a1 1 0 010 2H6z"
-      ></path>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M7 3a2 2 0 012-2h6a2 2 0 012 2v2a2 2 0 01-2 2H9a2 2 0 01-2-2V3zm8 0H9v2h6V3z"
-      ></path>
+      <path d="M7 4V2h10v2h3.007c.548 0 .993.445.993.993v16.014a.994.994 0 01-.993.993H3.993A.994.994 0 013 21.007V4.993C3 4.445 3.445 4 3.993 4H7zm0 2H5v14h14V6h-2v2H7V6zm2-2v2h6V4H9z"></path>
     </svg>
   );
 };

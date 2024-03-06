@@ -1,6 +1,6 @@
 {
-  "name": "fn-icons-demo",
-  "version": "0.0.0",
+  "name": "fn-icons",
+  "version": "0.0.1",
   "description": "Icon automation workflow with Figma",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

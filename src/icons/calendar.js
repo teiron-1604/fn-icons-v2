@@ -12,26 +12,7 @@ const Calendar = props => {
       fill={color}
       {...otherProps}
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M5 5a1 1 0 00-1 1v14a1 1 0 001 1h14a1 1 0 001-1V6a1 1 0 00-1-1H5zM2 6a3 3 0 013-3h14a3 3 0 013 3v14a3 3 0 01-3 3H5a3 3 0 01-3-3V6z"
-      ></path>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 1a1 1 0 011 1v4a1 1 0 11-2 0V2a1 1 0 011-1z"
-      ></path>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M8 1a1 1 0 011 1v4a1 1 0 01-2 0V2a1 1 0 011-1z"
-      ></path>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2 10a1 1 0 011-1h18a1 1 0 110 2H3a1 1 0 01-1-1z"
-      ></path>
+      <path d="M17 3h4a1 1 0 011 1v16a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"></path>
     </svg>
   );
 };

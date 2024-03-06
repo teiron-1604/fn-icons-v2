@@ -12,16 +12,7 @@ const Battery = props => {
       fill={color}
       {...otherProps}
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M3 7a1 1 0 00-1 1v8a1 1 0 001 1h14a1 1 0 001-1V8a1 1 0 00-1-1H3zM0 8a3 3 0 013-3h14a3 3 0 013 3v8a3 3 0 01-3 3H3a3 3 0 01-3-3V8z"
-      ></path>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M23 10a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1z"
-      ></path>
+      <path d="M4 7v10h14V7H4zM3 5h16a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm18 4h2v6h-2V9z"></path>
     </svg>
   );
 };

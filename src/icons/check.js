@@ -12,11 +12,7 @@ const Check = props => {
       fill={color}
       {...otherProps}
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M20.707 5.293a1 1 0 010 1.414l-11 11a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 15.586 19.293 5.293a1 1 0 011.414 0z"
-      ></path>
+      <path d="M10.5 15.172l9.192-9.193 1.415 1.414L10.5 18l-6.364-6.364 1.414-1.414 4.95 4.95z"></path>
     </svg>
   );
 };
