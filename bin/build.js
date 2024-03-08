@@ -51,6 +51,9 @@ const attrsToString = (attrs, style) => {
     if (key === 'width' || key === 'height' || key === style) {
       return key + '={' + attrs[key] + '}';
     }
+    if (key === "className" && attrs[key]) {
+      return `className={"${attrs[key]} " + className}`
+    }
     if (key === 'otherProps') {
       return '{...otherProps}';
     }
@@ -67,7 +70,7 @@ const generateIconCode = async ({name}) => {
   const code = fs.readFileSync(location)
   const svgCode = await processSvg(code)
   const ComponentName = names.componentName
-  const element = getElementCode(ComponentName, attrsToString(getAttrs(names.style), names.style), svgCode)
+  const element = getElementCode(ComponentName, attrsToString(getAttrs(names.style, name), names.style), svgCode)
   const component = format({
     text: element,
     eslintConfig: {
