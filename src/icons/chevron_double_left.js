@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ChevronDoubleLeft = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
@@ -18,13 +18,11 @@ const ChevronDoubleLeft = props => {
 };
 
 ChevronDoubleLeft.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  color: PropTypes.string
 };
 
 ChevronDoubleLeft.defaultProps = {
-  color: 'currentColor',
-  size: '24'
+  color: 'currentColor'
 };
 
 export default ChevronDoubleLeft;

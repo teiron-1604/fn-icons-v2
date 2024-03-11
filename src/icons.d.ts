@@ -1,15 +1,12 @@
 /// <reference types="react" />
-import { ComponentType, SVGAttributes } from 'react';
+  import { ComponentType, SVGAttributes } from 'react';
 
-interface Props extends SVGAttributes<SVGElement> {
-  color?: string;
-  size?: string | number;
-}
+  interface Props extends SVGAttributes<SVGElement> {
+    color?: string;
+  }
 
-type Icon = ComponentType<Props>;
-export type IconElement = Icon;
-export type IconComponent = Icon;
-export const Box: Icon;
+  type Icon = ComponentType<Props>;
+  export const Box: Icon;
 export const CodeBox: Icon;
 export const Mirroring: Icon;
 export const Mirror: Icon;

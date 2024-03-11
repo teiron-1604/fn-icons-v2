@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Group = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
       fill={color}
       {...otherProps}
@@ -25,13 +25,11 @@ const Group = props => {
 };
 
 Group.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  color: PropTypes.string
 };
 
 Group.defaultProps = {
-  color: 'currentColor',
-  size: '24'
+  color: 'currentColor'
 };
 
 export default Group;

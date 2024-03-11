@@ -1,8 +1,8 @@
 const getAttrs = (style, name) => {
   const baseAttrs = {
     xmlns: 'http://www.w3.org/2000/svg',
-    width: 'size',
-    height: 'size',
+    width: '1em',
+    height: '1em',
     viewBox: '0 0 24 24',
   }
   const fillAttrs = {
@@ -29,7 +29,7 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
   import PropTypes from 'prop-types';
 
   const ${ComponentName} = (props) => {
-    ${attrs.includes('className') ? "const { color, size, className=\"\", ...otherProps } = props;" : "const { color, size, ...otherProps } = props;"}
+    ${attrs.includes('className') ? "const { color, className=\"\", ...otherProps } = props;" : "const { color, ...otherProps } = props;"}
     return (
       <svg ${attrs}>
         ${svgCode}
@@ -39,15 +39,10 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
 
   ${ComponentName}.propTypes = {
     color: PropTypes.string,
-    size: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
   }
 
   ${ComponentName}.defaultProps = {
     color: 'currentColor',
-    size: '24',
   }
 
   export default ${ComponentName}

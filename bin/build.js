@@ -29,7 +29,6 @@ const generateIconsIndex = () => {
 
   interface Props extends SVGAttributes<SVGElement> {
     color?: string;
-    size?: string | number;
   }
 
   type Icon = ComponentType<Props>;
@@ -48,7 +47,8 @@ const attrsToString = (attrs, style) => {
   console.log('style: ', style)
   return Object.keys(attrs).map((key) => {
     // should distinguish fill or stroke
-    if (key === 'width' || key === 'height' || key === style) {
+    // if (key === 'width' || key === 'height' || key === style) {
+    if (key === style) {
       return key + '={' + attrs[key] + '}';
     }
     if (key === "className" && attrs[key]) {
