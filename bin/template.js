@@ -29,7 +29,7 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
   import PropTypes from 'prop-types';
 
   const ${ComponentName} = (props) => {
-    ${attrs.includes('className') ? "const { color, className=\"\", ...otherProps } = props;" : "const { color, ...otherProps } = props;"}
+    ${attrs.includes('className') ? "const { color = \"currentColor\", className=\"\", ...otherProps } = props;" : "const { color = \"currentColor\", ...otherProps } = props;"}
     return (
       <svg ${attrs}>
         ${svgCode}
@@ -39,10 +39,6 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
 
   ${ComponentName}.propTypes = {
     color: PropTypes.string,
-  }
-
-  ${ComponentName}.defaultProps = {
-    color: 'currentColor',
   }
 
   export default ${ComponentName}
