@@ -44,16 +44,10 @@ client
   .then(({ data }) => {
     console.log("Processing response");
     const components = {};
-    const componentNames = new Set();
 
     function check(c) {
       if (c.type === "COMPONENT") {
         const { name, id } = c;
-        if (componentNames.has(name)) {
-          console.warn(`Duplicate component name found: ${name}, skipping...`);
-          return;
-        }
-        componentNames.add(name);
         const { description = "", key } = data.components[c.id];
         const { width, height } = c.absoluteBoundingBox;
 
@@ -95,6 +89,7 @@ client
           const imageUrl = data.images[id];
           if (!imageUrl) {
             console.warn(`No image URL for component ID: ${id}`);
+            delete components[id];
             continue;
           }
           components[id].image = imageUrl;
