@@ -19,6 +19,10 @@ jobs:
         with:
           node-version: "20.x"
       - run: yarn install
+      - name: Debug Environment Variables
+        run: |
+          echo "FIGMA_FILE_URL is set: ${{ secrets.FIGMA_FILE_URL != '' }}"
+          echo "FIGMA_TOKEN is set: ${{ secrets.FIGMA_TOKEN != '' }}"
       - name: Figma Action
         uses: primer/figma-action@v1.0.0-alpha.2
         with:
