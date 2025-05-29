@@ -6,6 +6,7 @@ on:
     # file paths to consider in the event. Optional; defaults to all.
     paths:
       - package.json
+  workflow_dispatch: # 添加手动触发支持
 
 jobs:
   icon_automation:
@@ -18,6 +19,18 @@ jobs:
         with:
           node-version: "20.x"
       - run: yarn install
+      - name: Check Secrets
+        run: |
+          echo "FIGMA_FILE_URL is set: ${{ secrets.FIGMA_FILE_URL != '' }}"
+          echo "FIGMA_TOKEN is set: ${{ secrets.FIGMA_TOKEN != '' }}"
+          echo "NPM_AUTH_TOKEN is set: ${{ secrets.NPM_AUTH_TOKEN != '' }}"
+          echo "FIGMA_FILE_URL length: ${#FIGMA_FILE_URL}"
+          echo "FIGMA_TOKEN length: ${#FIGMA_TOKEN}"
+          echo "NPM_AUTH_TOKEN length: ${#NPM_AUTH_TOKEN}"
+        env:
+          FIGMA_FILE_URL: ${{ secrets.FIGMA_FILE_URL }}
+          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - name: Figma Action
         uses: primer/figma-action@v1.0.0-alpha.2
         with:
