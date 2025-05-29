@@ -1,6 +1,6 @@
 {
-  "name": "@fn/icons",
-  "version": "0.1.21",
+  "name": "@fn/icons-v2",
+  "version": "1.0.0",
   "description": "Icon automation workflow with Figma",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/teiron-1604/fn-icons.git",
+  "repository": "https://github.com/teiron-1604/fn-icons-v2",
   "author": "teiron-jueyue",
   "keywords": [
     "react",
