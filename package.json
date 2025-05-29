@@ -1,7 +1,7 @@
 {
   "name": "@fn/icons-v2",
   "version": "1.0.0",
-  "description": "Icon automation workflow with Figma",
+  "description": "@fn/icons-v2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "typings": "dist/icons.d.ts",
