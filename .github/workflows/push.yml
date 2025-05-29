@@ -23,10 +23,12 @@ jobs:
         run: |
           echo "FIGMA_FILE_URL is set: ${{ secrets.FIGMA_FILE_URL != '' }}"
           echo "FIGMA_TOKEN is set: ${{ secrets.FIGMA_TOKEN != '' }}"
+          echo "FIGMA_FILE_URL=${{ secrets.FIGMA_FILE_URL }}" >> $GITHUB_ENV
+          echo "FIGMA_TOKEN=${{ secrets.FIGMA_TOKEN }}" >> $GITHUB_ENV
       - name: Figma Action
         uses: primer/figma-action@v1.0.0-alpha.2
         with:
-          args: "format=svg outputDir=./src/"
+          args: "format=svg outputDir=./src/ --verbose"
         env:
           FIGMA_FILE_URL: ${{ secrets.FIGMA_FILE_URL }}
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
